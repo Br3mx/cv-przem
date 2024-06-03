@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Navbar.module.scss";
-import { Navbar, Nav, Container, NavLink } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaMailBulk } from "react-icons/fa";
 
@@ -24,7 +24,7 @@ const NavBar = () => {
         </Navbar.Brand>
         <Nav className="ml-auto">
           {links.map(({ to, icon: Icon, label }) => (
-            <NavLink
+            <Nav.Link
               as={Link}
               to={to}
               key={label}
@@ -33,7 +33,7 @@ const NavBar = () => {
             >
               <Icon className={style.navbarIcon} />
               <div className={style.navbarLabel}>{label}</div>
-            </NavLink>
+            </Nav.Link>
           ))}
         </Nav>
       </Container>
