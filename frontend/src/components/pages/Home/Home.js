@@ -1,7 +1,12 @@
 import React from "react";
+import FirstSection from "../../features/FirstSection/FirstSection";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <FirstSection />
+    </>
+  );
 };
 
 export default Home;

@@ -1,0 +1,8 @@
+@import "../../../style/settings.scss";
+
+.welcome {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: $color-green;
+}

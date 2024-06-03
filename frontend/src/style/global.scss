@@ -1,0 +1,9 @@
+@import "../style/settings.scss";
+
+body {
+  font-family: $font-basic !important;
+  ::selection {
+    background-color: transparent !important;
+    color: rgb(6, 205, 255);
+  }
+}

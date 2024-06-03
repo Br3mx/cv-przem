@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Navbar.module.scss";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -11,8 +11,26 @@ const NavBar = () => {
     { to: "/about", icon: FaInfoCircle, label: "About" },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY); // Debugging
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar className={style.container}>
+    <Navbar className={`${style.container} ${scrolled ? style.scrolled : ""}`}>
       <Container>
         <Navbar.Brand
           as={Link}
