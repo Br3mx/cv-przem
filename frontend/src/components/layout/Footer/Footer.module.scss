@@ -1,0 +1,22 @@
+@import "../../../style/settings.scss";
+
+.footer {
+  background-color: rgba($color-green, 0.7);
+  height: 5rem;
+  display: flex;
+  color: $color-dark;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.content {
+  font-size: 18px;
+  a {
+    text-decoration: none;
+    color: $color-dark;
+  }
+}
