@@ -1,21 +1,44 @@
 import React, { useEffect, useState } from "react";
 import style from "./Navbar.module.scss";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { FaHome, FaInfoCircle, FaMailBulk } from "react-icons/fa";
 
 const NavBar = () => {
   const links = [
-    { to: "/", icon: FaHome, label: "Home" },
-    { to: "/contact", icon: FaMailBulk, label: "Contact" },
-    { to: "/about", icon: FaInfoCircle, label: "About" },
+    {
+      to: "firstSection",
+      icon: FaHome,
+      label: "Home",
+      spy: true,
+      smooth: true,
+      offset: -200,
+      duration: 50,
+    },
+    {
+      to: "about",
+      icon: FaInfoCircle,
+      label: "About",
+      spy: true,
+      smooth: true,
+      offset: -70,
+      duration: 50,
+    },
+    {
+      to: "contact",
+      icon: FaMailBulk,
+      label: "Contact",
+      spy: true,
+      smooth: true,
+      offset: -120,
+      duration: 50,
+    },
   ];
 
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY); // Debugging
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
@@ -34,25 +57,35 @@ const NavBar = () => {
       <Container>
         <Navbar.Brand
           as={Link}
-          to="/"
+          to="firstSection"
+          spy={true}
+          offset={-200}
+          duration={50}
+          smooth={true}
           className={style.navbarBrand}
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", cursor: "pointer" }}
         >
           <h3 className={style.brandLogo}>PRZEMYSŁAW</h3>
         </Navbar.Brand>
         <Nav className="ml-auto">
-          {links.map(({ to, icon: Icon, label }) => (
-            <Nav.Link
-              as={Link}
-              to={to}
-              key={label}
-              className={style.navbarLink}
-              style={{ textDecoration: "none" }}
-            >
-              <Icon className={style.navbarIcon} />
-              <div className={style.navbarLabel}>{label}</div>
-            </Nav.Link>
-          ))}
+          {links.map(
+            ({ to, icon: Icon, label, spy, offset, duration, smooth }) => (
+              <Nav.Link
+                as={Link}
+                to={to}
+                spy={spy}
+                offset={offset}
+                duration={duration}
+                smooth={smooth}
+                key={label}
+                className={style.navbarLink}
+                style={{ textDecoration: "none", cursor: "pointer" }}
+              >
+                <Icon className={style.navbarIcon} />
+                <div className={style.navbarLabel}>{label}</div>
+              </Nav.Link>
+            )
+          )}
         </Nav>
       </Container>
     </Navbar>

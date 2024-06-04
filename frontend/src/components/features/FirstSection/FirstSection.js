@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./FirstSection.module.scss";
-import Welcome from "../../common/Welcome/Welcome";
+//import Welcome from "../../common/Welcome/Welcome";
 import ImgPrzemek from "../../common/ImgPrzemek/ImgPrzemek";
 const FirstSection = () => {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="firstSection">
       {/*<Welcome />*/}
       <div className={style.content}>
         <div className={style.img}></div>

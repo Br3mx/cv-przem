@@ -1,5 +1,8 @@
 @import "../../../style/settings.scss";
 
+.container {
+  height: 100vh;
+}
 .content {
   display: flex;
   align-items: center;

@@ -13,6 +13,9 @@
 
     .navbarLink {
       color: rgba($color-green, 0.7) !important;
+      &:hover {
+        color: rgba(white, 0.7) !important;
+      }
     }
   }
 }
