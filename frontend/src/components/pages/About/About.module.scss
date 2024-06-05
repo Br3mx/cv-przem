@@ -11,25 +11,8 @@
   margin: 0;
 }
 
-.title {
-  text-align: center;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-
-    transform: translateX(-50%);
-    opacity: 0.8;
-    bottom: -5px; // Ustaw odstęp od tekstu
-    width: 10%;
-    height: 3px; // Grubość podkreślenia
-    background-color: $color-dark; // Kolor podkreślenia
-  }
-}
-
 .text {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 20px;
   background-color: rgba($color-dark, 0.8);
   backdrop-filter: blur(7px);
@@ -38,4 +21,91 @@
   padding: 20px;
   text-align: center;
   color: white;
+}
+.skillsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(white, 0.7);
+  border: 5px double $color-dark;
+  border-radius: 10%;
+  padding: 1rem;
+  margin-right: 25px;
+  margin-left: 25px;
+  p {
+    padding: 1rem;
+  }
+}
+
+.cardTitle {
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px dotted rgba($color-dark, 0.8);
+  padding-bottom: 2px;
+  border-radius: 50px;
+}
+.iconCont {
+  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  .textWithoutLogo {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+  }
+  .webpack {
+    width: 100px;
+  }
+  .prisma {
+    height: 40px;
+    width: 70px;
+  }
+  .redux {
+    height: 40px;
+    width: 40px;
+  }
+  .mongo {
+    width: 90px;
+  }
+  .socket {
+    width: 40px;
+  }
+  img {
+    border: none;
+    height: 30px;
+    width: 30px;
+  }
+  .js {
+    color: yellow;
+  }
+}
+.cv {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+  align-items: center;
+  .downloadButton {
+    font-size: 20px;
+    padding: 10px;
+    color: rgba($color-green, 1);
+    border: 2px solid rgba($color-dark, 0.8);
+    background-color: $color-dark;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: $color-green;
+      border-radius: 0px;
+      color: $color-dark;
+    }
+  }
 }

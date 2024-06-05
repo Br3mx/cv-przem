@@ -21,7 +21,7 @@ const NavBar = () => {
       label: "About",
       spy: true,
       smooth: true,
-      offset: -70,
+      offset: -67,
       duration: 50,
     },
     {
