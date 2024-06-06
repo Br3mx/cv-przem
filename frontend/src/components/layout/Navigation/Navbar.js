@@ -13,7 +13,7 @@ const NavBar = () => {
       spy: true,
       smooth: true,
       offset: -200,
-      duration: 50,
+      duration: 500,
     },
     {
       to: "about",
@@ -22,7 +22,7 @@ const NavBar = () => {
       spy: true,
       smooth: true,
       offset: -67,
-      duration: 50,
+      duration: 500,
     },
     {
       to: "contact",
@@ -30,8 +30,8 @@ const NavBar = () => {
       label: "Contact",
       spy: true,
       smooth: true,
-      offset: -120,
-      duration: 50,
+      offset: -67,
+      duration: 500,
     },
   ];
 
@@ -60,7 +60,7 @@ const NavBar = () => {
           to="firstSection"
           spy={true}
           offset={-200}
-          duration={50}
+          duration={500}
           smooth={true}
           className={style.navbarBrand}
           style={{ textDecoration: "none", cursor: "pointer" }}
