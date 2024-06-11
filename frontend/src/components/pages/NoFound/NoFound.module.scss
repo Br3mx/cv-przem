@@ -1,0 +1,28 @@
+@import "../../../style/settings.scss";
+
+.container {
+  display: grid;
+  place-items: center;
+  color: white;
+  h1 {
+    font-size: 50px;
+  }
+  .buttonDiv {
+    margin-top: 5%;
+    a {
+      text-decoration: none;
+      button {
+        border: none;
+        padding: 5px 20px;
+        border-radius: 10px;
+        background-color: rgba($color-green, 0.5);
+        color: $color-dark;
+        transition: all 0.5s ease;
+        &:hover {
+          border-radius: 0px;
+          background-color: rgba($color-green, 0.9);
+        }
+      }
+    }
+  }
+}
