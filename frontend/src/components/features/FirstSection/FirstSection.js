@@ -11,7 +11,7 @@ const FirstSection = () => {
       {/*<Welcome />*/}
       <div className={style.content}>
         <div className={style.img}></div>
-        <ImgPrzemek img={firstSection} />
+        <ImgPrzemek />
         <div className={style.desc}>
           <p>
             <p className={style.descWelcome}>{firstSection.title}</p>
